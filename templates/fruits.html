@@ -2,6 +2,7 @@
 <head>
     <title>Dojo Fruit Store Assignment</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
 
@@ -25,7 +26,9 @@
           <div class="container">
             <h1 class="jumbotron-heading">Dojo Fruits</h1>
             <p>Please figure out how to display the images here...</p>
-
+            {% for fruit in fruits %}
+            <img src="{{url_for('static', filename='img/'+fruit)}}" class="fruit">
+            {% endfor %}
             <p>
               <a href="/" class="btn btn-primary my-2">Go back</a>
             </p>
